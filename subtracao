@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+
+using namespace std;
+
+
+float subtracao (float a , float b) {
+float x = a - b;
+ return x;
+}
+
+int main (void) {
+float a , b;
+ cin >> "Valor de a: " >> endl;
+ cin >> "Valor de b: " >> endl;
+ 	cout << subtracao(a , b) << endl; 
+}
+
