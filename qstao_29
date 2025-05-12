@@ -4,10 +4,10 @@ using namespace std;
 
 void greater_function (int num_1 , int num_2 , int num_3) {
   int greater = 0;
-  if ((num_1 > num_2 ) and (num_1 > num_3)) {
+  if ((num_1 >= num_2 ) and (num_1 >= num_3)) {
   	greater = num_1;
   }
-  else if ((num_2 > num_1) and (num_2 > num_3)) {
+  else if ((num_2 >= num_1) and (num_2 >= num_3)) {
   	greater = num_2;
   }
   else {
