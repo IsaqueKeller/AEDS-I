@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+//calcular IMC = peso/ altura²
+
+void Imc_function (float weight , float height) {
+	float IMC = 0;
+	float ideal_weight = 0;
+	IMC = weight / pow (height , 2);
+	cout << "Your IMC is: " << IMC << endl;
+	
+	ideal_weight = 
+	
+}
+
+int main () {
+	float kg , cm = 0;
+	cout << "Inform your weight: " << endl;
+	cin >> kg;
+	
+	cout << "Inform your height: " << endl;
+	cin >> cm;
+	
+	Imc_function (kg , cm);
+}
