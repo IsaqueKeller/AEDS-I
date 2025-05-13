@@ -9,7 +9,17 @@ void Imc_function (float weight , float height) {
 	IMC = weight / pow (height , 2);
 	cout << "Your IMC is: " << IMC << endl;
 	
-	ideal_weight = 
+	ideal_weight = 22 * pow (height , 2);
+	
+	if (IMC < 22.0) {
+		cout << "Your ideal weight is: " << ideal_weight << " kg." << endl;
+		cout << "You need to gain " << ideal_weight - weight << " kg." << endl;
+		 
+	} 
+	else {
+		cout << "Your ideal weight is: " << ideal_weight << " kg." << endl;
+		cout << "You need to lose " << weight - ideal_weight << " kg." << endl;
+	}
 	
 }
 
