@@ -1,0 +1,27 @@
+//Escrever um algoritmo que le um conjunto de 4 valores i, a, b, c, onde i e um valor inteiro e positivo e a, b, c, sao quaisquer valores reais e os escreva
+#include <iostream>
+using namespace std;
+
+void numbers (int i , float a , float b , float c) {
+	if (i == 1) {
+		if ((a > b) and (a > c)) {
+			if (b > c) {
+				cout << c << b << a << endl;
+			}
+		}
+	}
+	else if (i == 2) {
+		
+	}
+}
+
+int main (void) {
+	int v1 = 0;
+	float v2 = 0 , v3 = 0 , v4 = 0;
+	
+	cin >> v1;
+	cin >> v2;	
+	cin >> v3;
+	cin >> v4;
+numbers (v1, v2, v3, v4);	
+}
