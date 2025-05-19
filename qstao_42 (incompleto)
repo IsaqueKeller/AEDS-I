@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+void percent (int balance) {
+	switch (balance) {
+		case balance <= 200:
+			cout << "No credit" << endl;
+		break;
+		
+		case 2: 
+			balance >= 201 and balance <= 400;
+			cout << "20% of the balance" << endl;
+		break;
+		
+		case 3: 
+			balance > 400 and balance <= 600;
+			cout << "30% of the balance" << endl;
+		break;
+		
+		case 4:
+			balance > 600;
+			cout << "40% of the balance" << endl;
+		break; 
+		
+		default : (percent);
+	}
+}
+
+int main () {
+	int balance = 0;
+	cout << "What is your medium balance" << endl;
+	cin >> balance;
+	
+	percent (balance);
+}
