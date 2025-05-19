@@ -2,34 +2,47 @@
 using namespace std;
 
 void percent (int balance) {
-	switch (balance) {
-		case balance <= 200:
-			cout << "No credit" << endl;
-		break;
+	 int cod = 0;
+		if (balance <= 200) {
+			cod = 0;
+			
+		}
+		else if (balance <= 400){
+			cod = 1;		
+	}	
+		else if(balance <= 600) {
+			cod = 2;
+		} 
+		else if (balance > 600) {
+				cod = 3;
+		}
+		switch(cod) {
+			case 0: 
+				cout << "No credit" << endl;
+				break;
+				
+			case 1: 
+				cout << "20% of the balance" << endl;
+				cout << 0.2 * balance << endl;
+				break;
+				
+			case 2: 
+				cout << "30% of the balance" << endl;
+				cout << 0.3 * balance << endl;
+				break;
+				
+			case 3: 
+				cout << "40% of the balance" << endl;
+				cout << 0.4 * balance << endl;
+				break;
 		
-		case 2: 
-			balance >= 201 and balance <= 400;
-			cout << "20% of the balance" << endl;
-		break;
-		
-		case 3: 
-			balance > 400 and balance <= 600;
-			cout << "30% of the balance" << endl;
-		break;
-		
-		case 4:
-			balance > 600;
-			cout << "40% of the balance" << endl;
-		break; 
-		
-		default : (percent);
-	}
+		}
 }
 
 int main () {
 	int balance = 0;
 	cout << "What is your medium balance" << endl;
 	cin >> balance;
-	
 	percent (balance);
+	return 0;
 }
