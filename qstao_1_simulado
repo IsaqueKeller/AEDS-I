@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+char codigo () {
+	char code = '\0';
+	cout << "Informe o codigo do carro: " << endl;
+	cout << "Sedan - S" "," "Conversivel - C" ",""Popular - P" << endl;
+	cin >> code;
+	return code;
+}
+
+float preco_carro (char code , float preco) {
+float valor = 0;
+
+	switch (code) {
+		case 'S':
+			if (preco < 150000) {
+			valor = preco*1.11;
+		}	
+			else {
+			valor = preco*1.07;
+		}
+		break;
+		
+		case 'C':
+			if (preco < 100000) {
+				valor = preco *1.09;
+			}
+			else {
+				return preco;
+			}
+			break;
+			
+		case 'P' :
+			valor = preco*1.04;
+			break; 
+			
+			default :
+				valor = preco*1.05;
+				
+		return valor;
+	}
+}
+
+int main () {
+	char code = '\0';
+	float preco = 0;
+	float v = 0;
+	
+	code = codigo();
+	cout << "Qual e o preco do carro?" << endl;
+	cin >> preco;
+	
+	preco_carro(code , preco);
+	
+	v = preco_carro (code , preco);
+	
+	cout << "O novo valor sera: " << v << endl;
+	return 0;
+}
