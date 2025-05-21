@@ -1,60 +1,51 @@
+//Escrever um algoritmo que le um conjunto de 4 valores i, a, b, c, onde i e um valor inteiro e positivo e a, b, c, sao quaisquer valores reais e os escreva
 #include <iostream>
 using namespace std;
 
-char codigo () {
-	char code = '\0';
-	cout << "Informe o codigo do carro: " << endl;
-	cout << "Sedan - S" "," "Conversivel - C" ",""Popular - P" << endl;
-	cin >> code;
-	return code;
-}
-
-float preco_carro (char code , float preco) {
-float valor = 0;
-
-	switch (code) {
-		case 'S':
-			if (preco < 150000) {
-			valor = preco*1.11;
-		}	
-			else {
-			valor = preco*1.07;
-		}
-		break;
+void numbers (int i , float a , float b , float c) {
+	if (i == 1) { //ordem crescente
+		if (a > b and a > c and b > c) {		
 		
-		case 'C':
-			if (preco < 100000) {
-				valor = preco *1.09;
+		cout << c << b << a << endl;
 			}
-			else {
-				return preco;
+			
+			else if (b > a and b > c and c > a){
+				cout << a << c << b << endl;
 			}
-			break;
-			
-		case 'P' :
-			valor = preco*1.04;
-			break; 
-			
-			default :
-				valor = preco*1.05;
-				
-		return valor;
+			else if (a > c and a > b and c > b){
+				cout << b << c << a << endl; 
+			}
+			else if ()
+		}
+	
+	else if (i == 2) {
+		if (a > b and c > b and a > c) {
+			cout << a << c << b << endl;
+		}
+		else if ()
+	}
+	else if (i == 3) {
+		if (a > b and b > c) {
+			cout << b << a << c << endl;
+		}
+		else if (b > a and a > c) {
+			cout << a << b << c << endl;
+		}
+		else if (c > a and a > b) {
+			cout << a << c << b << endl;
+		}
 	}
 }
+ 
 
-int main () {
-	char code = '\0';
-	float preco = 0;
-	float v = 0;
+
+int main (void) {
+	int v1 = 0;
+	float v2 = 0 , v3 = 0 , v4 = 0;
 	
-	code = codigo();
-	cout << "Qual e o preco do carro?" << endl;
-	cin >> preco;
-	
-	preco_carro(code , preco);
-	
-	v = preco_carro (code , preco);
-	
-	cout << "O novo valor sera: " << v << endl;
-	return 0;
+	cin >> v1;
+	cin >> v2;	
+	cin >> v3;
+	cin >> v4;
+numbers (v1, v2, v3, v4);	
 }
