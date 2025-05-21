@@ -3,17 +3,40 @@
 using namespace std;
 
 void numbers (int i , float a , float b , float c) {
-	if (i == 1) {
-		if ((a > b) and (a > c)) {
-			if (b > c) {
-				cout << c << b << a << endl;
+	if (i == 1) { //ordem crescente
+		if ((a > b) and (a > c) and (b > c)) {		
+		
+		cout << c << b << a << endl;
+			}
+			
+			else if (b > a and b > c and c > a){
+				cout << a << c << b << endl;
+			}
+			else {
+				cout << b << c << a << endl; 
 			}
 		}
-	}
+	
 	else if (i == 2) {
-		
+		if (a > b and c > b and a > c) {
+			cout << a << c << b << endl;
+		}
+		else if ()
+	}
+	else if (i == 3) {
+		if (a > b and b > c) {
+			cout << b << a << c << endl;
+		}
+		else if (b > a and a > c) {
+			cout << a << b << c << endl;
+		}
+		else if (c > a and a > b) {
+			cout << a << c << b << endl;
+		}
 	}
 }
+
+
 
 int main (void) {
 	int v1 = 0;
