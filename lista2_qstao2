@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-float greatest (int quantity , float number) {
+float greatest (int quantity) {
 		int i = 0;
+		float number = 0;
 		float greater = 0;
 	
 	do {
@@ -19,14 +20,11 @@ float greatest (int quantity , float number) {
 }
 
 int main () {
-	
 	int quantity = 0;
-	float number = 0;
-	
 	cout << "Inform how many numbers you want to see: " << endl;
 	cin >> quantity;
 	
-float result = greatest (quantity , number);	
+float result = greatest (quantity);	
 
 cout << "The greatest number is: " << result << endl;
 }
