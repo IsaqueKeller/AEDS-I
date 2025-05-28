@@ -12,9 +12,11 @@ int main () {
 else {
 
 	do {
+	cout << "Error" << endl;
 	cout << "Type in a grade: " << endl;
 		cin >> grade;
 		
-	} while (grade < 0 or grade > 10);
+	} while (grade < 0 or grade > 10); 
+
 }
 }
