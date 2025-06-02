@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int fat (int number) {
+	if (number == 0) {
+		return 1;
+	}
+	else {
+		return number* fat(number-1);
+	}
+}
+
+int main () {
+	int number = 0;
+	cout << "Type in a number to know its fatorial: " << endl;
+	cin >> number;
+	
+	int result = fat (number);
+	cout << "Fatorial: " << number << endl;
+	cout << "5! = ";
+	for (int i = number; i > 0; i--) {
+		cout << i;
+		if (i > 1) {	
+		cout << ".";	
+	}	
+	else {
+		cout << " = " << result;
+	}
+}
+}
