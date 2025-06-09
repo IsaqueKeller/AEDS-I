@@ -9,36 +9,44 @@ using namespace std;
 
 void population () {
 	float year = 0;
-	int result_a = 80000 * (pow (1.03 , year));
-	int result_b = 200000 * (pow (1.015 , year));
-	int final_result = 
-	if (result_a >= result_b) {
-		cout << "The population of the country A will overcome B in " << year << " years." << endl;
-	}
+	float result_a = 80000; 
+	float result_b = 200000;
+do {
+	result_a *= 1.03;
+	result_b *= 1.015;
+	year++;
+}while (result_a <= result_b);
+
+	cout << "The population of the country A will overcome B in " << year << " years." << endl;
+	
 }
 
-void calculating_population (int people_a , int people_b , float year , int tax_a , int tax_b) {
-	int answer_a = people_a * pow (tax_a , year);
-	int answer_b = people_b * pow (tax_b , year);
-	
+void calculating_population (int people_a , int people_b , float year , float tax_a , float tax_b) {
+
+do {
 	cout << "Inform the population of country A: " << endl;
 	cin >> people_a;
+	
+	cout << "Inform the tax of A: " << endl;
+	cin >> tax_a;
+	tax_a = 1 + tax_a/100;
 	
 	cout << "Inform the population of country B: " << endl;
 	cin >> people_b;
 	
-	cout << "Inform the year: " << endl;
-	cin >> year;
-	
-	cout << "Inform the tax of A: " << endl;
-	cin >> tax_a;
-	
 	cout << "Inform the tax of B: " << endl;
 	cin >> tax_b;
+	tax_b = 1 + tax_b/100;
+} while (people_a >= people_b);
+	do {
+		people_a *= tax_a;
+		people_b *= tax_b;
+		year ++;
+	} while (people_a <= people_b);
 	
-	if (answer_a >= answer_b) {
-		cout << "The population of A will overcome B in " << year << " years." << endl;
-	}
+	
+	cout << "The population of A will overcome B in " << year << " years." << endl;
+	
 }
 
 int main () {
