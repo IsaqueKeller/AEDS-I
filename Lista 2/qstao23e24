@@ -8,7 +8,7 @@ bool calculate_prime (int number) {
 	if (number <= 1) {
 		return false;
 	}
-	for (int i = 2; i * i <= number; i++) {
+	for (int i = 2; i < number; i++) {
 		if (number % i == 0) {
 			return false;
 		} 
@@ -29,6 +29,12 @@ if(calculate_prime (number)) {
 }
 else {
 	cout << number << " isn't prime." << endl;
+	cout << "The number's dividers are: " << endl;
+	for (int i = 1; i <= number; i++) {
+		if (number % i == 0) {
+			cout << i << endl;
+		}
+	}
 }
 return 0;
 }
