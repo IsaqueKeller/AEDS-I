@@ -7,8 +7,9 @@ float smallest = 999999;
 float sum = 0;
 for (int i = 0; i < quantity; i ++) {
 
+	do {
 		cout << "Type in a number: " << endl;
-		cin >> number;
+		cin >> number; } while (number < 0 or number > 1000);
 		sum += number;	
 		if (number > greater) {
 			greater = number;
