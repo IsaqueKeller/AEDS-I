@@ -10,9 +10,6 @@ void weight_height (char sex , float height) {
  		cout << "Your ideal weight is: " << (62.1 * height)	- 44.7 << endl;
 	 }
  } 
-  
-
-
 int main () {
 	char a = 0;
 	float b = 0;
