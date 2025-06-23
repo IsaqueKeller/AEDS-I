@@ -38,7 +38,10 @@ void candidates (int electors) {
 int main () {
 	int electors = 0;
 	
+	do {
+	
 	cout << "Type in the number of electors: " << endl;
 	cin >> electors;	
+} while (electors <= 0);
 	candidates (electors);
 }
