@@ -2,15 +2,10 @@
 using namespace std;
 
 void function (int *v1 , int size) {
-	int i = 0; 
-	int counter = 0;
-	while (i < size) {
-		if (i % 2 != 0) {
-			v1[counter] = i;
-			counter++;
-		} i++;
+	for (int i = 0; i < size; i++){
+		v1 [i] = 2 * i + 1;
 	}
-	for (int i = 0; i <= counter; i++) {
+	for (int i = 0; i < size; i++) {
 		cout << v1[i] << " ";
 	}
 }
@@ -18,6 +13,6 @@ void function (int *v1 , int size) {
 int main () {
 	int *v1;
 	int size = 100;
-	v1 [size];
+	v1 = new int [size];
 	function (v1 , size);
 }
