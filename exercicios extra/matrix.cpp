@@ -20,6 +20,16 @@ void print_matrix (float **matrix , int line , int column) {
 	}
 }
 
+void sum (float **matrix , int line , int column) {
+	int somatory = 0;
+	for (int l = 0; l <= line - 1; l++){
+		for (int c = 0; c <= column - 1; c++) {
+			somatory += matrix [l][c];	
+	}
+}
+cout << "somatory: " << somatory << endl;
+}
+
 int main () {
 	float **matrix;
 	int line , column;
@@ -37,4 +47,5 @@ int main () {
 	
 	fill_matrix (matrix , line , column);
 	print_matrix (matrix , line , column);
+	sum (matrix , line , column);
 }
