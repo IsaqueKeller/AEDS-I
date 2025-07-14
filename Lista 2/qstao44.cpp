@@ -14,6 +14,7 @@ void elections () {
 	cout << "5 - Null vote" << endl;
 	cout << "6 - Blank vote" << endl;
 	cout << "0 - Leave" << endl;
+	cout << "-----------------" << endl;
 	cout << "Choose an option: " << endl;
 	cin >> code;
 	
@@ -34,14 +35,19 @@ void elections () {
 	}
 	
 	} while (code != 0);
+	cout << endl;
 	total = counterA + counterB + counterC + counternull + counterblank;
 	cout << "Votes for candidate A: " << counterA << endl;
 	cout << "Votes for candidate B: " << counterB << endl;
 	cout << "Votes for candidate C: " << counterC << endl;
 	
 	cout << "Null votes: " << counternull << endl; 
+	cout << "Blank votes: " << counterblank << endl;
+	
+	cout << "The percentage of null votes over the total is: " << counternull/total << " %" << endl;
+	cout << "The percentage of blank votes over the total is: " << counterblank/total << " %" << endl;
 }
 
 int main () {
-	
+	elections ();
 }
