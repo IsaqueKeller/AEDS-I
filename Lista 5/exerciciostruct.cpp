@@ -26,8 +26,17 @@ void person_info (person &p1) {
 	cin >> p1.height;
 }
 
+void printperson (person &p1) {
+	cout << "Person's name: " << p1.name << endl;
+	cout << "Person's sex: " << p1.sex << endl;
+	cout << "Person's age: " << p1.age << endl;
+	cout << "Person's weight: " << p1.weight << endl;
+	cout << "Person's height: " << p1.height << endl;
+}
+
 int main () {
 	person p1;
 	person_info (p1);
+	printperson (p1);
 	
 }
