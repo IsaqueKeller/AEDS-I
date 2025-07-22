@@ -17,13 +17,13 @@ void notes (int size , float *grade , int *absolute_frequency) {
 	} cout << endl;
 }
 
-void fill_notes (int size , float *grade , int *absolute_frequency) {
-	float relative_frequency = 0;
+void print_frequencies (int *absolute_frequency , int size) {
+	float total = 0;
 	for (int i = 0; i < size; i ++) {
-		relative_frequency += absolute_frequency [i];
+		total += absolute_frequency [i];
 	cout << i << " Absolute frequency: " << absolute_frequency[i] << endl;
 	}
-	cout << "Relative frequency: " << relative_frequency/size << endl;
+	cout << "Relative frequency: " << total/size << endl;
 }
 
 int main (){
@@ -38,5 +38,5 @@ int main (){
 	grade = new float [size];
 
 	notes (size , grade , absolute_frequency);
-	fill_notes (size , grade , absolute_frequency);
+	print_frequencies (absolute_frequency , size);
 }
