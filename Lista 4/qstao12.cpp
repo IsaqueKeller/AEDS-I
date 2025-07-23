@@ -9,6 +9,7 @@ void calculus (int size , string *name , float *height , char *sex) {
 	float sumwm = 0;
 	float sum = 0;
 	int wmcounter = 0;
+	
 	for (int i = 0; i < size; i++){
 		cout << "What is your name?" << endl;
 		cin >> name[i];
@@ -38,6 +39,7 @@ void calculus (int size , string *name , float *height , char *sex) {
 	cout << "The person with the greatest height is: " << grheight_name << " with " << greatest_height << endl;
 	cout << "The person with the lowest height is: " << lwheight_name << " with " << lowest_height << endl;
 	cout << endl;
+	
 	float averagewm = sumwm/wmcounter;
 	cout << "Women with height below average: " << endl;
 		for (int i = 0; i < size; i++){
@@ -67,7 +69,6 @@ int main (){
 	name = new string [size];
 	height = new float [size];
 	sex = new char [size];
-	
 	
 	calculus (size , name , height , sex);
 }
