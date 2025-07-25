@@ -26,16 +26,18 @@ struct tropa{
 	int tam;
 };
 
-void funcao (tropa , soldado) {
-	
-	
-
+void funcao (tropa t1, soldado sol1) {
+	for (int i = 0; i < t1.tam; i++) {
+		if (t1.soldier[i] == sol1) {
+			cout << "deu certo";
+		}
+	}
 }
 
 int main () {
 	tropa t1;
 	
-	cout << "Tropa: " << endl;
+	cout << "Nome da tropa: " << endl;
 	cin >> t1.name;
 	
 	cout << "Quantos soldados sao da tropa? " << endl;
@@ -43,5 +45,7 @@ int main () {
 	
 	t1.soldier = new soldado [t1.tam];
 	soldado sol1;
+	sol1.preenchesoldado();
 	funcao (t1 , sol1);
+	return 0;
 }
