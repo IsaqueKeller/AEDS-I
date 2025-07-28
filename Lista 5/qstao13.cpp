@@ -35,23 +35,24 @@ struct agenda {
 		show_contacts ();
 }
 	void delete_contacts () {
-		
 		show_contacts();
-		cout << "Which contact you wish to delete? " << endl;
-		int position;
+		int position = 0;
+		cout << "Which contact you wish to delete (position)? " << endl;
 		cin >> position;
 		
-		for (int i = 0; i < maxcontacts; i++) {
-			if (position == i) {
-				c1[i].name = c1[i + 1].name;
-				c1[i].number = c1[i+1].number;
-				maxcontacts--;
-			}
+		if (position > maxcontacts) {
+			cout << "Invalid" << endl; 
 		}
+		
+		for (int i = 0; i < maxcontacts; i++) {
+			if (i >= position && i + 1 < maxcontacts) {
+				c1[i].name = c1[i + 1].name;
+				c1[i].number = c1[i + 1].number;
+				}
+			}
+		maxcontacts--;
 		show_contacts();
 	}
-	
-	
 };
 
 int main () {
@@ -61,7 +62,6 @@ int main () {
 	int option;
 	
 	do {
-		
 		cout << "What do you want to do? " << endl;
 		cout << "1- add contacts.  2- delete contacts.  3- show contacts. 0 = stop program" << endl;
 		cin >> option;
